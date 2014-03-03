@@ -1,0 +1,37 @@
+%div.carousel
+  %div.pull-right
+    %h3
+      #{album.name} / #{picture.basename}
+    %ul
+      %li 
+        #{t.picturama.picture.taken} #{l picture.ctime, :full}
+
+
+  %div.picture_container
+    %img.img-polaroid(src="/#{@locale}/#{album.folder.to_url}/resized/#{picture.basename}")
+
+%h3
+  Opiniones de la foto...
+  %div.discuss_comment
+    #disqus_thread
+      :javascript
+        var base_url = location.protocol + '//' + location.host;
+        var disqus_shortname = 'davidsilveira';
+        var disqus_identifier = '#{Digest::MD5.hexdigest(request.path_info)}';
+        var disqus_url = base_url + '#{request.path_info}';
+        var disqus_title = '#{album.name} / #{picture.basename}'
+        var disqus_developer = 1;
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        function disqus_config() {
+          this.callbacks.onNewComment = [function() {
+            $.ajax({  url: base_url + '#{request.path_info}/disqus-sync' });
+          }];
+        }
+    %a.dsq-brlink(href="http://disqus.com")
+      comments powered by
+      %span.logo-disqus
+        Disqus

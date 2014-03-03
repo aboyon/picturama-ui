@@ -1,0 +1,12 @@
+%div.row
+- albums.each do |album|
+  %div.col-lg-4.picture_container
+    %h2
+      #{album.name}
+    %a(href="/#{@locale}/#{album.folder.to_url}#slider")
+      %img.img-circle.album_preview(src="/#{@locale}/#{album.folder.to_url}/thumbnail/#{album.pictures.first.basename}")
+    %p
+      #{album.count_pictures} #{t.picturama.album.pictures.downcase}
+    %p
+      %a.btn.btn-default(href="/#{@locale}/#{album.folder.to_url}#slider")
+        View album

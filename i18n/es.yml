@@ -1,0 +1,23 @@
+site:
+  title: "mi coleccion de fotos"
+  and: y
+  menu:
+    home: Inicio
+    blog: Blog
+    about: Acerca
+    languages: Traducir a...
+  footer:
+    credits: Este sitio lo hice usando
+
+picturama:
+  title: Fotos de David Silveira
+  album:
+    view: Ver album
+    pictures: Imagenes aca
+    size: "Tama&ntilde;o del album"
+    view_pic: "ver foto"
+  picture:
+    name: Nombre
+    comments: Comentarios
+    size: "Tama&ntilde;o"
+    taken: "Imagen tomada el"

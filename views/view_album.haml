@@ -1,0 +1,44 @@
+#slider.carousel.slide(data-ride="carousel")
+  %div.carousel-inner
+    - album.pictures.each do |picture|
+      - if (album.pictures.first.basename == picture.basename)
+        %div.item.active
+          %img(src="/#{@locale}/#{album.folder.to_url}/resized/#{picture.basename}")
+          %div.carousel-caption
+            %h3
+              #{picture.basename}
+            %a.btn.btn-default.pull-right(href="/#{@locale}/#{album.folder.to_url}/#{picture.basename}")
+              #{t.picturama.album.view_pic}
+            %p
+              #{t.picturama.picture.taken} #{l picture.ctime}
+      - else
+        %div.item
+          %img(src="/#{@locale}/#{album.folder.to_url}/resized/#{picture.basename}")
+          %div.carousel-caption
+            %h3
+              #{picture.basename}
+            %a.btn.btn-default.pull-right(href="/#{@locale}/#{album.folder.to_url}/#{picture.basename}")
+              #{t.picturama.album.view_pic}
+            %p
+              #{t.picturama.picture.taken} #{l picture.ctime}
+
+  %a.left.carousel-control(href="#slider" data-slide="prev")
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control(href="#slider" data-slide="next")
+    %span.glyphicon.glyphicon-chevron-right
+
+%div.clear
+
+%h1
+  #{album.name}
+
+- album.pictures.each do |picture|
+  %div.album_card
+    %h5
+      #{picture.basename}
+    %a(href="/#{@locale}/#{album.folder.to_url}/#{picture.basename}")
+      %img.img-polaroid(src="/#{@locale}/#{album.folder.to_url}/thumbnail/#{picture.basename}")
+    %p.muted.small
+      #{t.picturama.picture.taken} #{l picture.ctime}
+
+%script(src='/js/view_album.js')

@@ -1,0 +1,23 @@
+site:
+  title: "mi photos, my life"
+  and: and
+  menu:
+    home: Home
+    blog: blog
+    about: about
+    languages: Translate to...
+  footer:
+    credits: This site was built using
+
+picturama:
+  title: David Silveira pictures
+  album:
+    view: View album
+    pictures: Pictures here
+    size: album size
+    view_pic: "view picture"
+  picture:
+    name: Picture name
+    comments: Comments
+    size: Size
+    taken: "Taken on "
