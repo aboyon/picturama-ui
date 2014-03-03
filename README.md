@@ -38,6 +38,7 @@ Generating 30 thumbnails for folder /some/folder/ ...
 Size: 200x200
 Thumbnail generated from source 1.JPG. Target destination thumb_1.JPG
 Thumbnail generated from source 2.JPG. Target destination thumb_2.JPG
+```
 
 # Built with...
 
