@@ -1,5 +1,5 @@
 picturama:
-  base_folder: '/home/davidsilveira/Pictures/cata/'
+  base_folder: '/home/user/Pictures'
   allowed_formats: ['jpg','png','jpeg']
   thumbnail_prefix: thumb_
   thumnail_default_size: "200x200"
