@@ -1,3 +1,6 @@
 config/config.yml
 .rvmrc
 bootstrap-3.1.1-dist
+config/deploy.rb
+config/deploy/production.rb
+config/deploy/staging.rb

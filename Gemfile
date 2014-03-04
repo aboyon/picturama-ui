@@ -8,3 +8,6 @@ gem "picturama"
 
 # Internationalization
 gem "sinatra-r18n", "~> 1.1.3"
+
+#deployment.. :)
+gem 'capistrano', '~> 2.15.5'
