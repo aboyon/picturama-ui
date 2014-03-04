@@ -32,7 +32,7 @@ generate your thumbnails quickly, by using the rake task created for that
 ```
 rake thumbnail:generate["/some/folder"] #you can specify a different folder...
 ```
-and then you'll get an answer like this:
+and then you'll get an ouput like this:
 ```
 Generating 30 thumbnails for folder /some/folder/ ...
 Size: 200x200
