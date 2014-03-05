@@ -1,3 +1,4 @@
+require 'capistrano/ext/multistage'
 load 'deploy'
 # Uncomment if you are using Rails' asset pipeline
     # load 'deploy/assets'
