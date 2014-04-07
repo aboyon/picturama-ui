@@ -5,3 +5,12 @@ picturama:
   thumnail_default_size: "200x200"
   resized_prefix: resized_
   resized_default_size: "800x800"
+  capistrano:
+    port: 22
+    app_name: "Picturama UI"
+    deploy_to: "<<PATH>>"
+    repository: "git@github.com:aboyon/picturama-ui.git"
+    user: "<<USERNAME>>"
+    stages:
+      - staging
+      - production
