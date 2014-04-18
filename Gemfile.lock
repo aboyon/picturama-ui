@@ -47,7 +47,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano (~> 2.15.5)
+  capistrano
   haml
   picturama
   rake
