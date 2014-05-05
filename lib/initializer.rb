@@ -1,6 +1,7 @@
 require 'haml'
 require 'sinatra/r18n'
 require 'picturama'
+require 'pry' if Sinatra::Base.development?
 
 # setting the language depending on the user agent language
 R18n::I18n.default do |default|

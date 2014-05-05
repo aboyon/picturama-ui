@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', :git => "git://github.com/sinatra/sinatra.git"
+gem 'sinatra'
 gem 'rake'
 gem 'haml'
 
@@ -11,3 +11,7 @@ gem "sinatra-r18n", "~> 1.1.3"
 
 #deployment.. :)
 gem 'capistrano'
+
+group :development do
+  gem "pry"
+end
