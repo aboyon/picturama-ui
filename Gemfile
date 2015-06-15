@@ -12,6 +12,4 @@ gem "sinatra-r18n", "~> 1.1.3"
 #deployment.. :)
 gem 'capistrano'
 
-group :development do
-  gem "pry"
-end
+gem "pry"
