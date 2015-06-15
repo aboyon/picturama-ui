@@ -3,9 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'sinatra'
 require 'initializer'
 
-Dir["ext/*.rb"].each do |extension|
-  require extension
-end
+Dir["ext/*.rb"].each { |extension| require extension }
 
 set :haml, :format => :html5
 

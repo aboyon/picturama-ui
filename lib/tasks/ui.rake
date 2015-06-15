@@ -1,4 +1,5 @@
 require 'picturama'
+require 'pry'
 
 namespace :picturama do
 
