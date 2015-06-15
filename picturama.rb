@@ -10,7 +10,7 @@ set :haml, :format => :html5
 before do
   lang_found = request.path_info.scan(/[a-z]{2}/).first
   @locale = (R18n.available_locales.map(&:code).include?(lang_found)) ? lang_found : R18n::I18n.default
-  @album_source = Picturama::config['base_folder']
+  @album_source = Picturama::config['album_source']
 end
 
 get '/' do

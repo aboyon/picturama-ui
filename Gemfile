@@ -4,7 +4,7 @@ gem 'sinatra'
 gem 'rake'
 gem 'haml'
 
-gem "picturama"
+gem "picturama", "~> 1.0.1"
 
 # Internationalization
 gem "sinatra-r18n", "~> 1.1.3"
@@ -13,3 +13,4 @@ gem "sinatra-r18n", "~> 1.1.3"
 gem 'capistrano'
 
 gem "pry"
+gem "colorize"
