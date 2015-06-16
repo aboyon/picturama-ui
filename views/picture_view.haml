@@ -1,17 +1,15 @@
 %div.carousel
-  %div.pull-right
-    %h3
+  %div
+    %h1
       #{album.name} / #{picture.basename}
-    %ul
-      %li 
-        #{t.picturama.picture.taken} #{l picture.ctime, :full}
-
 
   %div.picture_container
     %img.img-polaroid(src="/#{@locale}/#{album.folder.to_url}/resized/#{picture.basename}")
+%div.clear
 
-%h3
-  Opiniones de la foto...
+.container
+  %h1
+    Opiniones de la foto...
   %div.discuss_comment
     #disqus_thread
       :javascript
@@ -35,3 +33,15 @@
       comments powered by
       %span.logo-disqus
         Disqus
+
+  %h1
+    #{album.name}
+
+  - album.pictures.each do |picture|
+    %div.col-md-3.album_card
+      %h5
+        #{picture.basename}
+      %a(href="/#{@locale}/#{album.folder.to_url}/#{picture.basename}")
+        %img.img-polaroid(src="/#{@locale}/#{album.folder.to_url}/thumbnail/#{picture.basename}")
+      %p.muted.small
+        #{t.picturama.picture.taken} #{l picture.ctime}

@@ -29,16 +29,17 @@
 
 %div.clear
 
-%h1
-  #{album.name}
+.container
+  %h1
+    #{album.name}
 
-- album.pictures.each do |picture|
-  %div.album_card
-    %h5
-      #{picture.basename}
-    %a(href="/#{@locale}/#{album.folder.to_url}/#{picture.basename}")
-      %img.img-polaroid(src="/#{@locale}/#{album.folder.to_url}/thumbnail/#{picture.basename}")
-    %p.muted.small
-      #{t.picturama.picture.taken} #{l picture.ctime}
+  - album.pictures.each do |picture|
+    %div.col-md-3.album_card
+      %h5
+        #{picture.basename}
+      %a(href="/#{@locale}/#{album.folder.to_url}/#{picture.basename}")
+        %img.img-polaroid(src="/#{@locale}/#{album.folder.to_url}/thumbnail/#{picture.basename}")
+      %p.muted.small
+        #{t.picturama.picture.taken} #{l picture.ctime}
 
 %script(src='/js/view_album.js')
