@@ -5,3 +5,8 @@ config/deploy.rb
 config/deploy/production.rb
 config/deploy/staging.rb
 config/picturama.yml
+node_modules
+public/assets/*.css
+public/assets/*.js
+public/assets/fonts/*
+
